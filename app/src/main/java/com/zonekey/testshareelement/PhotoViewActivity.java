@@ -47,7 +47,7 @@ public class PhotoViewActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             postponeEnterTransition();
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-            getWindow().setExitTransition(new Explode());
+//            getWindow().setExitTransition(new Explode());
         }
         setContentView(R.layout.activity_photo_view);
         pos = getIntent().getIntExtra(TAG_PHOTO, -1);
@@ -78,7 +78,7 @@ public class PhotoViewActivity extends AppCompatActivity {
         PhotoViewAdapter photoViewAdapter = new PhotoViewAdapter(this, mLists, new OnCreateTargetViewListener() {
             @Override
             public void targetView(View view) {
-                ViewCompat.setTransitionName(view, MainActivity.SHARE_IMAGE_NAME);
+//                ViewCompat.setTransitionName(view, MainActivity.SHARE_IMAGE_NAME);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     startPostponedEnterTransition();
                 }

@@ -81,25 +81,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     Log.e("Callback", "pos =" + pos + "view == null ? " + (view == null));
                 }
-
-                @Override
-                public void onSharedElementStart(List<String> sharedElementNames, List<View> sharedElements, List<View> sharedElementSnapshots) {
-                    super.onSharedElementStart(sharedElementNames,sharedElements,sharedElementSnapshots);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        ChangeBounds changeBounds = new ChangeBounds();
-
-//                        changeBounds.captureStartValues();
-//                       getWindow().setSharedElementReturnTransition(ChangeBounds);
-//                        getWindow().setEnterTransition();
-                    }
-                    Log.e("Callback","onSharedElementStart");
-                }
-
-                @Override
-                public void onSharedElementEnd(List<String> sharedElementNames, List<View> sharedElements, List<View> sharedElementSnapshots) {
-                    super.onSharedElementEnd(sharedElementNames, sharedElements, sharedElementSnapshots);
-                    Log.e("Callback","onSharedElementEnd");
-                }
             });
         }
         getALLImages();
